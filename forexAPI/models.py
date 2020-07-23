@@ -3,14 +3,12 @@ from django.db import models
 # Create your models here.
 
 class Currency(models.Model):
-    pair = models.CharField(max_length = 20)
-    bid = models.FloatField()
-    ask = models.FloatField()
-    high = models.FloatField()
-    low = models.FloatField()
-    change = models.CharField(max_length = 20)
+    name = models.CharField(max_length = 20)
+    price = models.CharField(max_length = 20)
     change_p = models.CharField(max_length = 20)
-    time = models.TimeField()
+    M_cap = models.CharField(max_length = 20)
+    supply = models.CharField(max_length = 20)
+    volume = models.CharField(max_length = 20)
 
     class Meta:
         verbose_name = 'Currency'
